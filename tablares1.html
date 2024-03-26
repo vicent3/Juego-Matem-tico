@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--<script src="js/archivo1.js"></script>-->
+    <script src="js/jquery.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+           
+            let datos = [8,2,4,1,16]; //arreglo de valores
+            let resultado = 0;
+
+            function botones(numero,condicion){
+                if(numero == 1 && condicion == "si"){
+                    resultado = resultado + datos[0];
+                    console.log(resultado);
+                }else{
+                    resultado += 0;
+                }
+                
+                if(numero==2&&condicion=="si"){
+                    resultado = resultado + datos[1];
+                    
+                    console.log(resultado);
+                }
+                else{
+                    resultado += 0;
+                }
+                if(numero==3&&condicion=="si"){
+                    resultado = resultado + datos[2];
+                    
+                    console.log(resultado);
+                }
+                else{
+                    resultado += 0;
+                }
+                if(numero==4&&condicion=="si"){
+                    resultado = resultado + datos[3];
+                    
+                    console.log(resultado);
+                }
+                else{
+                    resultado += 0;
+                }
+                if(numero==5&&condicion=="si"){
+                    resultado = resultado + datos[4];
+                    
+                    console.log(resultado);
+                    
+                    $("#resultadoMensaje").html("<p>El numero que usted penso es: </p>"+resultado);
+
+                    
+                }else{
+                    $("#resultadoMensaje").html("<p>El numero que usted penso es: </p>"+resultado);
+                }
+                
+                
+            }
+
+             //Ocultando todos, menos la tabla 1
+             $("#tabla2").hide();
+            $("#tabla3").hide();
+            $("#tabla4").hide();
+            $("#tabla5").hide();
+
+            //Ocultando todos, menos la tabla 2
+            $("#si1").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").show();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+
+                botones(1,"si");
+            });
+
+            //Ocultando todos, menos la tabla 3
+            $("#si2").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").show();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+                botones(2,"si");
+
+            });
+            //Ocultando todos, menos la tabla 4
+            $("#si3").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").show();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+
+                botones(3,"si");
+
+            });
+            //Ocultando todos, menos la tabla 5
+            $("#si4").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").show();
+                $("#resultadoMensaje").hide();
+
+                botones(4,"si");
+
+            });
+            //Mostrando resultado
+            $("#si5").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+
+                botones(5,"si");
+                $("#resultadoMensaje").show();
+
+            });
+
+            /*******NO*****/
+            //Ocultando todos, menos la tabla 2
+            $("#no1").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").show();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+
+                botones(1,"no");
+            });
+
+            //Ocultando todos, menos la tabla 3
+            $("#no2").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").show();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+                botones(2,"no");
+
+            });
+            //Ocultando todos, menos la tabla 4
+            $("#no3").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").show();
+                $("#tabla5").hide();
+                $("#resultadoMensaje").hide();
+
+                botones(3,"no");
+
+            });
+            //Ocultando todos, menos la tabla 5
+            $("#no4").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").show();
+                $("#resultadoMensaje").hide();
+
+                botones(4,"no");
+
+            });
+            //Mostrando resultado
+            $("#no5").click(function () { 
+                
+                $("#tabla1").hide();
+                $("#tabla2").hide();
+                $("#tabla3").hide();
+                $("#tabla4").hide();
+                $("#tabla5").hide();
+
+                botones(5,"no");
+                $("#resultadoMensaje").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>JUEGO MATEMATICO</h1>
+    <div class="formcovid">
+        <div id="tabla1">
+        <table class="table1">
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+            </tr>
+        </table>      
+                <button id="si1" class="botonSI">SI</button>
+                <button id="no1" class="botonNO">NO</button>              
+        </div>
+
+        <!--Tabla 2-->
+
+        <div id="tabla2">
+            <table class="table2">
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>30</td>
+                </tr>
+            </table>           
+                <button id="si2" class="botonSI">SI</button>
+                <button id="no2" class="botonNO">NO</button>
+                
+        </div>
+
+        <!--tabla 3-->
+        <div id="tabla3">
+            <table class="table3">
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </table>      
+            <button id="si3" class="botonSI">SI</button>
+            <button id="no3" class="botonNO">NO</button>
+        </div>
+
+        <!--Tabla 4-->
+
+        <div id="tabla4">
+            <table class="table4">
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>15</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>21</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>27</td>
+                    <td>29</td>
+                </tr>
+            </table>      
+                <button id="si4" class="botonSI">SI</button>
+                <button id="no4" class="botonNO">NO</button>
+        </div>
+
+
+        <!--Tabla 5-->
+        <div id="tabla5">
+
+            <table class="table5">
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </table>      
+                <button id="si5" class="botonSI">SI</button>
+                <button id="no5" class="botonNO">NO</button>
+        </div>
+
+        <!--Resultado-->
+
+        <div id="resultadoMensaje">
+            
+        </div>
+
+
+    </div>
+
+</body>
+</html>
